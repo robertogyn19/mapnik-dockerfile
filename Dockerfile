@@ -55,6 +55,6 @@ RUN git submodule update --init
 RUN ./configure
 
 RUN apt-get install -y automake build-essential
-RUN make
+RUN JOBS=1 make
 
 CMD [/bin/bash]
